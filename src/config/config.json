@@ -1,0 +1,14 @@
+{
+    "menu_items": [
+        {
+            "title": "Presentation",
+            "url": "/",
+            "active": true
+        },
+        {
+            "title": "Presentation Form",
+            "url": "/",
+            "active": true
+        }
+    ]
+}

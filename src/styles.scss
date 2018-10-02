@@ -1,0 +1,10 @@
+@import './app/app.component';
+
+// bootstrap
+@import './../node_modules/bootstrap/scss/bootstrap';
+
+// application styles
+@import './app/components/button/button.component';
+@import './app/components/input/input.component';
+@import './app/components/label/label.component';
+@import './app/components/text/text.component';
