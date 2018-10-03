@@ -15,7 +15,11 @@
         <app-button (click)="onClick($event)" class="col-2" label="absenden"></app-button>
     </div>
     <div *ngFor="let ticket of tickets">
-        <!-- <app-label class="col-1" label="Bezeichnung"></app-label><app-label class="col-1" [label]="ticket.getTitle()"></app-label><br> -->
-        <app-text class="row" label="Bezeichnung" [value]="ticket.getTitle()"></app-text>
+        <app-text class="row"
+            label="Bezeichnung"
+            [value]="ticket.getTitle()"
+            labelStyle="col-2"
+            valueStyle="col-2"
+        ></app-text>
     </div>
 </div>
