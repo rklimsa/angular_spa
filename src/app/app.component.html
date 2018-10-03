@@ -9,12 +9,13 @@
     </div>
     <div class="row">
         <app-label class="col-2" label="Ablaufdatum"></app-label>
-        <app-input class="col-2" formControlName="date" type="date" placeholder="dd.mm.yyyy"></app-input>    
+        <app-input class="col-2" formControlName="date" type="date"></app-input>    
     </div>
     <div class="row">
         <app-button (click)="onClick($event)" class="col-2" label="absenden"></app-button>
     </div>
-</div>
-<div class="row" *ngFor="let ticket of tickets">
-    <app-label class="col-1" label="Bezeichnung"></app-label><app-label class="col-1" [label]="ticket.getTitle()"></app-label><br>
+    <div *ngFor="let ticket of tickets">
+        <!-- <app-label class="col-1" label="Bezeichnung"></app-label><app-label class="col-1" [label]="ticket.getTitle()"></app-label><br> -->
+        <app-text class="row" label="Bezeichnung" [value]="ticket.getTitle()"></app-text>
+    </div>
 </div>

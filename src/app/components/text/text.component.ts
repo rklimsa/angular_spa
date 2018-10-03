@@ -3,14 +3,12 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 @Component({
   selector: 'app-text',
   template: `
-    <span
-    [class]="this.labelStyle">
-      {{label}}
-    </span>
-    <span
-    [class]="this.valueStyle">
-      {{value}}
-    </span>
+  <div class="col-2">
+    <app-label [label]="this.label"></app-label>
+  </div>
+  <div class="col-2">
+    <app-label [label]="this.value"></app-label>
+  </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
