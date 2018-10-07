@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { TableCell } from '../table-cell/table-cell.model';
 
 @Component({
   selector: 'app-table-footer',
@@ -7,14 +8,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
       table-footer works!
     </p>
   `,
-  styleUrls: ['./table-footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TableFooterComponent implements OnInit {
+export class TableFooterComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input()
+  public footers: TableCell[];
 
 }

@@ -1,20 +1,22 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { TableCell } from '../table-cell/table-cell.model';
 
 @Component({
   selector: 'app-table-header',
   template: `
-    <p>
-      table-header works!
-    </p>
+    <tr>
+      <th *ngFor="let header of headers"
+          [attr.colspan]="header.getColSpan()"
+          [attr.rowspan]="header.getRowSpan()">
+        {{header.getText()}}
+      </th>
+    </tr>
   `,
-  styleUrls: ['./table-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TableHeaderComponent implements OnInit {
+export class TableHeaderComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input()
+  public headers: TableCell[];
 
 }

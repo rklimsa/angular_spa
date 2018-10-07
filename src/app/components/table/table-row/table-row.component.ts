@@ -1,20 +1,22 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { TableCell } from '../table-cell/table-cell.model';
 
 @Component({
   selector: 'app-table-row',
   template: `
-    <p>
-      table-row works!
-    </p>
+    <tr *ngFor="let row of rows">
+      <td *ngFor="let data of row"
+      [attr.colspan]="data.getColSpan()"
+      [attr.rowspan]="data.getRowSpan()">
+      {{data.getText()}}
+      </td>
+    </tr>
   `,
-  styleUrls: ['./table-row.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TableRowComponent implements OnInit {
+export class TableRowComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input()
+  public rows: TableCell[][];
 
 }
