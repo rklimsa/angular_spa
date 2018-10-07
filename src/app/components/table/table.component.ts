@@ -39,10 +39,10 @@ import { TableCell } from './table-cell/table-cell.model';
 @Component({
   selector: 'app-table',
   template: `
-    <table>
-      <app-table-header class="row" [headers]="this.headers"></app-table-header>
-      <app-table-row class="row" [rows]="this.rows"></app-table-row>
-      <app-table-footer class="row" [footers]="this.footers"></app-table-footer>
+    <table border="1">
+      <app-table-header [headers]="this.headers"></app-table-header><br>
+      <app-table-row [rows]="this.rows"></app-table-row><br>
+      <app-table-footer [footers]="this.footers"></app-table-footer><br>
     </table>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
