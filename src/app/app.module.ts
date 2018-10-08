@@ -9,6 +9,10 @@ import { InputComponent } from './components/input/input.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ButtonComponent } from './components/button/button.component';
 import { TextComponent } from './components/text/text.component';
+import { TableComponent } from './components/table/table.component';
+import { TableHeaderComponent } from './components/table/table-header/table-header.component';
+import { TableRowComponent } from './components/table/table-row/table-row.component';
+import { TableFooterComponent } from './components/table/table-footer/table-footer.component';
 
 const routes: Array<Route> = [{
   path: '',
@@ -21,7 +25,11 @@ const routes: Array<Route> = [{
     LabelComponent,
     InputComponent,
     ButtonComponent,
-    TextComponent
+    TextComponent,
+    TableComponent,
+    TableHeaderComponent,
+    TableRowComponent,
+    TableFooterComponent
   ],
   imports: [
     BrowserModule,

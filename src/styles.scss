@@ -1,10 +1,13 @@
-@import './app/app.component';
-
 // bootstrap
 @import './../node_modules/bootstrap/scss/bootstrap';
 
 // application styles
+@import './app/app.component';
 @import './app/components/button/button.component';
 @import './app/components/input/input.component';
 @import './app/components/label/label.component';
 @import './app/components/text/text.component';
+@import './app/components/table/table.component';
+@import './app/components/table/table-header/table-header.component';
+@import './app/components/table/table-row/table-row.component';
+@import './app/components/table/table-footer/table-footer.component';
