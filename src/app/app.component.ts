@@ -63,8 +63,8 @@ export class AppComponent {
       result.push([]);
       result[index].push(new TableCell(t.getTitle(), 1, 1, ''));
       result[index].push(new TableCell(t.getCreator(), 1, 1, ''));
-      result[index].push(new TableCell(t.getCreationDate().toString(), 1, 1, ''));
-      result[index].push(new TableCell(t.getDueDate().toString(), 1, 1, ''));
+      result[index].push(new TableCell(t.getCreationDate().toLocaleDateString(), 1, 1, ''));
+      result[index].push(new TableCell(new Date(t.getDueDate()).toLocaleDateString(), 1, 1, ''));
     });
 
     return result;

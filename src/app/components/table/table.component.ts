@@ -39,10 +39,21 @@ import { TableCell } from './table-cell/table-cell.model';
 @Component({
   selector: 'app-table',
   template: `
-    <table border="1">
-      <app-table-header [headers]="this.headers"></app-table-header><br>
-      <app-table-row [rows]="this.rows"></app-table-row><br>
-      <app-table-footer [footers]="this.footers"></app-table-footer><br>
+    <table>
+    <tr>
+      <th *ngFor="let header of headers"
+          [attr.colspan]="header.getColSpan()"
+          [attr.rowspan]="header.getRowSpan()">
+        {{header.getText()}}
+      </th>
+    </tr>
+    <tr *ngFor="let row of rows">
+      <td *ngFor="let data of row"
+      [attr.colspan]="data.getColSpan()"
+      [attr.rowspan]="data.getRowSpan()">
+      {{data.getText()}}
+      </td>
+    </tr>
     </table>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
